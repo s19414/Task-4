@@ -3,16 +3,16 @@
     [Serializable]
     public class Animal
     {
-        public Animal(int idAnimal, string Name, string Description, string Category, string Area)
+        public Animal(int IdAnimal, string Name, string Description, string Category, string Area)
         {
-            this.idAnimal = idAnimal;
+            this.IdAnimal = IdAnimal;
             this.Name = Name;
             this.Description = Description;
             this.Category = Category;
             this.Area = Area;
         }
 
-        public int idAnimal { get; set; }
+        public int IdAnimal { get; set; }
         public string Name { get; set;}
         public string Description { get; set;}
         public string Category { get; set;}

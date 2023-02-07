@@ -1,5 +1,7 @@
-
+using Microsoft.Extensions;
 using APBD4.Services;
+using Microsoft.Extensions.DependencyInjection;
+using APBD4.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -8,6 +10,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<SqlDbService>();
+//IConfiguration Configuration = builder.Configuration;
+//builder.Services.AddSingleton<IConfiguration>(Configuration);
 
 var app = builder.Build();
 
